@@ -37,6 +37,7 @@ if [[ -n "$previous" ]]; then
 fi
 
 cp "$candidate" "$tap/Formula/kickstart.rb"
+brew readall --os=all --arch=all kickstart-ci/tap
 brew style "$formula"
 brew audit --formula "$formula"
 if [[ -n "$previous" ]]; then

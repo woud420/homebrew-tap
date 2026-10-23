@@ -9,6 +9,11 @@ class Kickstart < Formula
       url "https://github.com/woud420/kickstart/releases/download/v0.4.6/kickstart-macos-arm64-py3.14.tar.gz"
       sha256 "1f36fff1151cb7ca91ec1cf10c3cf1712a7d16ecf442c02c1cad20b598ece920"
     end
+    # Keep metadata loadable on Intel so the architecture requirement explains the failure.
+    on_intel do
+      url "https://github.com/woud420/kickstart/releases/download/v0.4.6/kickstart-macos-arm64-py3.14.tar.gz"
+      sha256 "1f36fff1151cb7ca91ec1cf10c3cf1712a7d16ecf442c02c1cad20b598ece920"
+    end
   end
 
   on_linux do
