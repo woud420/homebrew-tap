@@ -36,6 +36,6 @@ guards, upgrade from v0.4.5, and uninstall on each native target, then updates
 `Formula/kickstart.rb`. It uses a dedicated token restricted to this repository
 with Contents read/write. This tap's own CI verifies direct formula changes.
 
-See the [upstream Homebrew runbook](https://github.com/woud420/kickstart/blob/codex/homebrew-tap/docs/operations/homebrew.md)
-for credential setup and manual recovery. The release integration is delivered
-in the upstream `codex/homebrew-tap` branch until its PR is merged.
+See the [upstream Homebrew runbook](https://github.com/woud420/kickstart/blob/master/docs/operations/homebrew.md)
+for credential setup and manual recovery. The release integration is maintained
+in the upstream repository.
