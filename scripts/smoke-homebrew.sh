@@ -4,7 +4,7 @@ set -euo pipefail
 
 candidate="$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
 previous="${2:-}"
-formula="woud420/tap/kickstart"
+formula="kickstart-ci/tap/kickstart"
 export HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_CLEANUP=1 HOMEBREW_NO_ANALYTICS=1
 export KICKSTART_TELEMETRY_DISABLED=1
 
@@ -14,9 +14,9 @@ if brew list --versions kickstart >/dev/null 2>&1; then
 fi
 
 scratch="$(mktemp -d)"
-tap="$(brew --repository)/Library/Taps/woud420/homebrew-tap"
+tap="$(brew --repository)/Library/Taps/kickstart-ci/homebrew-tap"
 if [[ -e "$tap" ]]; then
-  echo "Refusing to replace an existing woud420/tap checkout." >&2
+  echo "Refusing to replace an existing kickstart-ci/tap checkout." >&2
   rmdir "$scratch"
   exit 1
 fi
